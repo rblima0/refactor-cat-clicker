@@ -1,0 +1,245 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #ecf0f1;
+    font-family: OpenSans, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.masthead {
+    padding: 2em 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.masthead h1 {
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.col {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: -4px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #ffc107;
+    margin: 0 auto;
+    box-shadow: 0 6px 11.31px 1.69px rgba(0,0,0,.3);
+    background: url("../images/cat.png") #ffc107;
+    background-repeat: repeat;
+}
+
+.card h3 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 0.5em;
+}
+
+.cat {
+    width: 100%;
+    cursor: pointer;
+}
+
+.card p {
+    padding: 0.5em;
+}
+
+.card h4 {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+.heart {
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+}
+
+span {
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.item {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* MENU */
+nav {
+    margin: 0;
+    padding: 0;
+}
+  
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+nav ul.opening {
+    display: block;
+}
+
+nav li { border-bottom: 1px solid #f6f4e2; }
+
+nav li:last-child { border-bottom: none; }
+
+nav a {
+    color: #000;
+    background: #e7a119;
+    display: block;
+    padding: 1.5em 4em 1.5em 3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav a:hover, nav a:focus { background: #E4B363; }
+
+.site-nav--icon {
+    font-size: 1.4em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: rgba(255,255,255,.4);
+}
+
+/* TOGGLE */
+.menu-toggle {
+    position: absolute;
+    padding: 0.8em;
+    top: 2em;
+    right: .5em;
+    cursor: pointer;
+}
+  
+.hamburger, .hamburger::before, .hamburger::after {
+    content: '';
+    display: block;
+    background: #ffc107;
+    height: 3px;
+    width: 2em;
+    border-radius: 3px;
+    -webkit-transition: all ease-in-out 350ms;
+    transition: all ease-in-out 350ms;
+}
+
+.hamburger::before {
+    -webkit-transform: translateY(-7px);
+    transform: translateY(-7px);
+}
+
+.hamburger::after {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+}
+
+.open .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.open .hamburger::before { display: none; }
+
+.open .hamburger::after {
+    -webkit-transform: translateY(-1px) rotate(-90deg);
+    transform: translateY(-1px) rotate(-90deg);
+}
+
+/* MIXIN */
+@media screen and (min-width: 780px) {
+    .menu-toggle { display: none; }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0 auto;
+    }
+
+    nav li {
+        flex: 1 1 auto;
+        border: none;
+    }
+
+    nav li a {
+        padding: 1.5em 1.3em 1.5em 1.3em;
+        margin: 0;
+        border: none;
+        background-color: #ffc107;
+    }
+
+    nav a:hover,  nav a:focus { background-color: rgba(255,255,255,.10); }
+
+    .logo {
+        flex: 0 0 200px;
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        background-color: #ffc107;
+    }
+}
+
+#admin {
+    margin: 2em auto 0 auto;
+    padding: 1em;
+    background-color: #e4ad02;
+    max-width: 300px;
+}
+
+.btn-admin, .btn-save, .btn-cancel {
+    text-align: center;
+    background-color: #ffc107;
+    color: #000;
+    width: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 1em auto;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+.row {
+    text-align: center;
+}
